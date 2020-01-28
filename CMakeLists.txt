@@ -180,8 +180,6 @@ endif()
 if (${VKB_BUILD_VULKAN_VALIDATION_LAYERS})
   include(cmake/vulkan-validation-layers.cmake)
 endif()
-
-# Vulkan-ExtensionLayer requires Vulkan-Headers
 if (${VKB_BUILD_VULKAN_EXTENSION_LAYER})
   include(cmake/vulkan-extensionlayer.cmake)
 endif()
