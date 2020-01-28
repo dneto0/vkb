@@ -17,12 +17,5 @@ message(STATUS "VKB Vulkan-ExtensionLayer: ${VKB_VULKAN_EXTENSION_LAYER_SOURCE_D
 if(${CMAKE_SYSTEM_NAME} MATCHES "Android")
   message(STATUS "VKB Vulkan-ExtensionLayer: Skipping on Android")
 else()
-  if(MSVC)
-    set(BUILD_TESTS OFF CACHE BOOL "Vulkan-ExtensionLayer tests off")
-    message(STATUS "VKB Vulkan-ExtensionLayer: Disabling tests")
-  else()
-    set(BUILD_TESTS ON CACHE BOOL "Vulkan-ExtensionLayer tests on")
-  endif()
-
   add_subdirectory(${VKB_VULKAN_EXTENSION_LAYER_SOURCE_DIR})
 endif()
