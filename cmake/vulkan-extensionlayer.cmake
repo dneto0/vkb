@@ -16,6 +16,8 @@ message(STATUS "VKB Vulkan-ExtensionLayer: ${VKB_VULKAN_EXTENSION_LAYER_SOURCE_D
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Android")
   message(STATUS "VKB Vulkan-ExtensionLayer: Skipping on Android")
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  message(STATUS "VKB Vulkan-ExtensionLayer: Skipping on Windows: missing pthread.h")
 else()
   add_subdirectory(${VKB_VULKAN_EXTENSION_LAYER_SOURCE_DIR})
 endif()
